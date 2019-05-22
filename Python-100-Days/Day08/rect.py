@@ -1,0 +1,22 @@
+class Rect(object):
+    def __init__(self, width=0, height=0):
+        self.__width=width
+        self.__height = height
+
+    def perimeter(self):
+        return (self.__width + self.__height) * 2
+
+    def area(self):
+        return self.__width * self.__height
+
+    def __str__(self):
+        return 'rectangle[%f, %f]' % (self.__width, self.__height)
+
+    def __del__(self):
+        print('Destory object.')
+
+if __name__ == '__main__':
+    rect1 = Rect(3.5, 4.5)
+    print(rect1)
+    print(rect1.perimeter())
+    #print(rect1.area())
